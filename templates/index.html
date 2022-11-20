@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/charts.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+  <div class="col-md-12 jumbotron text-center">
+	  <h1>Predicting Readmission of Diabetic Patients within 30 days of discharge</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="age" placeholder="Age (Years)" required="required" />
+        <input type="text" name="time_in_hospital" placeholder="Time in hospital(1 to 14)" required="required" />
+  <input type="text" name="gender_1" placeholder="Gender(Male=1, Female=0)" required="required" />
+	<input type="text" name="num_procedures" placeholder="No. of procedures(0 to 6)" required="required" />
+	<input type="text" name="num_medications" placeholder="No. of medications(1 to 81)" required="required" />
+	<input type="text" name="number_diagnoses" placeholder="No. of diagnoses(3 to 16)" required="required" />
+	<input type="text" name="metformin" placeholder="Metformin (Yes=1, No=0)" required="required" />
+	<input type="text" name="insulin" placeholder="Insulin (Yes=1, No=0)" required="required" />
+  <input type="text" name="number_outpatient_log1p" placeholder="Number Outpatient log1p(0 to 2)" required="required" />
+	<input type="text" name="discharge_disposition_id_2" placeholder="discharge_disposition_id(0 to 28)" required="required" />
+	
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
