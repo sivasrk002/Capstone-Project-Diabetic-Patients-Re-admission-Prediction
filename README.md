@@ -55,7 +55,7 @@ Diabetes Mellitus (DM) is a chronic disease where the blood has high sugar level
 * Model performance metrics – Precision, Recall, Accuracy, ROC_AUC
 * Model selection – Precison and Recall Ranks
 * Hyper parameter tuning - GridSearchCV
-* Final model – Best classifier model with good Recall and Precidion Score
+* Final model – Best classifier model with good Recall and Precision Score and for this dataset XGB_Classifier satifies the following
 
 ### Impact on business: 
 Hospital readmission is an important contributor to total medical expenditures and is an emerging indicator of quality of care. Diabetes, similar to other chronic medical conditions, is associated with increased risk of hospital readmission. As mentioned in the article “Correction to: Hospital Readmission of Patients with Diabetes”, hospital readmission is a high-priority health care quality measure and target for cost reduction, particularly within 30 days of discharge. The burden of diabetes among hospitalized patients is substantial, growing, and costly, and readmissions contribute a significant portion of this burden. Reducing readmission rates among patients with diabetes has the potential to greatly reduce health care costs while simultaneously improving care. Our aim is to provide some insights into the risk factors for readmission and also to identify the medicines that are the most effective in treating diabetes. 
